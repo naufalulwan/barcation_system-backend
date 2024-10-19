@@ -1,16 +1,15 @@
-package product
+package inquiry
 
 import (
 	"barcation_be/models"
-	"net/http"
-
 	"github.com/gin-gonic/gin"
+	"net/http"
 )
 
-func GetProductController(c *gin.Context) {
-	var p models.Product
+func GetInquiryController(c *gin.Context) {
+	var i models.Inquiry
 
-	data, err := p.GetProduct()
+	data, err := i.GetInquiry()
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": err.Error()})
 		return
@@ -19,14 +18,13 @@ func GetProductController(c *gin.Context) {
 	res := make([]map[string]interface{}, 0)
 	for _, v := range data {
 		res = append(res, map[string]interface{}{
-			"id":            v.ID,
-			"name":          v.Name,
-			"price":         v.Price,
-			"stock":         v.Quantity,
-			"status":        v.Status,
-			"image":         v.Image,
-			"desc":          v.Description,
-			"category_name": v.Category.Name,
+			"id":             v.ID,
+			"user_name":      v.User.Username,
+			"product_name":   v.Product.Name,
+			"total_price":    v.TotalPrice,
+			"total_quantity": v.TotalQuantity,
+			"status":         v.Status,
+			"created_at":     v.CreatedAt,
 		})
 	}
 

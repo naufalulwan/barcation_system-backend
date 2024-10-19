@@ -15,7 +15,6 @@ type Config struct {
 var ENV *Config
 
 func LoadConfig() {
-
 	ENV = &Config{
 		DbUser: os.Getenv("DB_USER"),
 		DbPass: os.Getenv("DB_PASSWORD"),

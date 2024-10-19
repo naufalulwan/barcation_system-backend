@@ -14,7 +14,6 @@ type createCartRequest struct {
 }
 
 func CreateCartController(c *gin.Context) {
-
 	var p models.Product
 	var request createCartRequest
 
@@ -24,7 +23,6 @@ func CreateCartController(c *gin.Context) {
 	}
 
 	productData, err := p.GetProductById(uint(request.ProductID))
-
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": err.Error()})
 		return
@@ -48,5 +46,4 @@ func CreateCartController(c *gin.Context) {
 	}
 
 	c.JSON(http.StatusOK, gin.H{"error": false, "code": http.StatusOK, "message": "success", "data": res})
-
 }

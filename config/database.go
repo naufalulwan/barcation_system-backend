@@ -25,5 +25,4 @@ func SetupDatabase() {
 	} else {
 		helper.Logger.Infof("\x1b[38;5;10mConnection Success to Database\x1b[0m")
 	}
-
 }

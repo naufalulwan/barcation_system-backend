@@ -1,8 +1,8 @@
 package product
 
 import (
-	"barcation_be/models"
 	"barcation_be/handlers"
+	"barcation_be/models"
 
 	"net/http"
 
@@ -19,18 +19,16 @@ type createProductRequest struct {
 }
 
 func CreateProductController(c *gin.Context) {
-
 	var u models.User
 	var request createProductRequest
-	admin_id, err := handlers.ExtractTokenById(c)
 
+	adminId, err := handlers.ExtractTokenById(c)
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": err.Error()})
 		return
 	}
 
-	dataAdmin, err := u.GetUserById(admin_id)
-
+	dataAdmin, err := u.GetUserById(adminId)
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": err.Error()})
 		return
@@ -57,7 +55,6 @@ func CreateProductController(c *gin.Context) {
 	}
 
 	err = p.SaveProduct()
-
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": err.Error()})
 		return

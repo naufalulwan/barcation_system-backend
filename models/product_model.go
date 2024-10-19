@@ -43,13 +43,11 @@ func (p *Product) DeleteProduct(id uint) error {
 }
 
 func (p *Product) UpdateProduct(id uint) error {
-	if p.CategoryID != 0 {
-		if err := config.DB.First(&Category{}, p.CategoryID).Error; err != nil {
-			if errors.Is(err, gorm.ErrRecordNotFound) {
-				return errors.New("category not found")
-			}
-			return err
+	if err := config.DB.First(&Category{}, p.CategoryID).Error; err != nil {
+		if errors.Is(err, gorm.ErrRecordNotFound) {
+			return errors.New("category not found")
 		}
+		return err
 	}
 
 	if err := config.DB.Model(&Product{}).Where("id = ?", id).Updates(&p).Update("status", p.Status).Error; err != nil {
@@ -75,10 +73,9 @@ func (p *Product) GetProduct() ([]Product, error) {
 }
 
 func (p *Product) SaveProduct() error {
-
 	if err := config.DB.First(&Category{}, p.CategoryID).Error; err != nil {
 		if errors.Is(err, gorm.ErrRecordNotFound) {
-			return errors.New("Category not found")
+			return errors.New("category not found")
 		}
 		return err
 	}

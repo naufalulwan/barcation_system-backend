@@ -20,18 +20,16 @@ type updateProductRequest struct {
 }
 
 func UpdateProductController(c *gin.Context) {
-
 	var u models.User
 	var request updateProductRequest
-	admin_id, err := handlers.ExtractTokenById(c)
 
+	adminId, err := handlers.ExtractTokenById(c)
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": err.Error()})
 		return
 	}
 
-	dataAdmin, err := u.GetUserById(admin_id)
-
+	dataAdmin, err := u.GetUserById(adminId)
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": err.Error()})
 		return
@@ -58,7 +56,6 @@ func UpdateProductController(c *gin.Context) {
 	}
 
 	err = p.UpdateProduct(request.ID)
-
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": err.Error()})
 		return

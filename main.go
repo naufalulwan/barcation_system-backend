@@ -5,6 +5,7 @@ import (
 	"barcation_be/controllers"
 	"barcation_be/controllers/cart"
 	"barcation_be/controllers/category"
+	"barcation_be/controllers/inquiry"
 	"barcation_be/controllers/product"
 	"barcation_be/controllers/public"
 	"barcation_be/controllers/user"
@@ -31,7 +32,7 @@ func main() {
 	config.LoadConfig()
 	config.SetupDatabase()
 
-	err := config.DB.AutoMigrate(&models.User{}, &models.Category{}, &models.Product{}, &models.Cart{})
+	err := config.DB.AutoMigrate(&models.User{}, &models.Category{}, &models.Product{}, &models.Cart{}, &models.Inquiry{})
 	if err != nil {
 		return
 	}
@@ -131,4 +132,15 @@ func setRoute() {
 	protectedCart.POST("/create_cart", cart.CreateCartController)
 	protectedCart.GET("/get_cart", cart.GetCartController)
 	protectedCart.DELETE("/delete_cart", cart.DeleteCartController)
+
+	// API FOR INQUIRY ["/api/inquiry"]
+	protectedInquiry := r.Group("/api/inquiry")
+	protectedInquiry.Use(middlewares.AuthTokenMiddleware())
+
+	protectedInquiry.GET("/get_inquiry", inquiry.GetInquiryController)
+	protectedInquiry.GET("/get_inquiry_by_id", inquiry.GetInquiryByIdController)
+	protectedInquiry.POST("/create_inquiry", inquiry.CreateInquiryController)
+	protectedInquiry.DELETE("/delete_inquiry", inquiry.DeleteInquiryController)
+	protectedInquiry.PUT("/update_inquiry", inquiry.UpdateInquiryController)
+
 }

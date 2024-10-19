@@ -1,21 +1,20 @@
-package cart
+package inquiry
 
 import (
 	"barcation_be/handlers"
 	"barcation_be/models"
-	"net/http"
-
 	"github.com/gin-gonic/gin"
+	"net/http"
 )
 
-type DeleteCartRequest struct {
+type DeleteInquiryRequest struct {
 	ID uint `json:"id"`
 }
 
-func DeleteCartController(c *gin.Context) {
-	var cart models.Cart
+func DeleteInquiryController(c *gin.Context) {
+	var inquiry models.Inquiry
 	var u models.User
-	var request DeleteCartRequest
+	var request DeleteInquiryRequest
 
 	userId, err := handlers.ExtractTokenById(c)
 	if err != nil {
@@ -24,7 +23,7 @@ func DeleteCartController(c *gin.Context) {
 	}
 
 	if err := c.ShouldBindJSON(&request); err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": err.Error()})
+		c.JSON(400, gin.H{"error": err.Error()})
 		return
 	}
 
@@ -34,16 +33,15 @@ func DeleteCartController(c *gin.Context) {
 		return
 	}
 
-	if dataUser.Level != "user" && dataUser.Level != "admin" {
-		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": "only user and admin can delete cart"})
+	if dataUser.Level != "admin" {
+		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": "only admin can delete inquiry"})
 		return
 	}
 
-	err = cart.DeleteCart(request.ID)
+	err = inquiry.DeleteInquiry(request.ID)
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": err.Error()})
 	}
 
 	c.JSON(http.StatusOK, gin.H{"error": false, "code": http.StatusOK, "message": "delete cart success"})
-
 }
