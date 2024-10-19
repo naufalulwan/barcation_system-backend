@@ -1,4 +1,0 @@
-GET http://localhost:8080/api/inquiry/get_inquiry
-Authorization: {{token}}
-Refresh-Token: {{refresh-token}}
-Content-Type: application/json

@@ -1,9 +1,0 @@
-PUT http://localhost:8080/api/category/update_category
-Authorization: {{token}}
-Refresh-Token: {{refresh-token}}
-Content-Type: application/json
-
-{
-    "id": 3,
-    "name": "Makanan"
-}

@@ -1,9 +1,0 @@
-PUT http://localhost:8080/api/user/recovery_user
-Authorization: {{token}}
-Refresh-Token: {{refresh-token}}
-Content-Type: application/json
-
-{
-    "id" : 1,
-    "status" : true
-}
