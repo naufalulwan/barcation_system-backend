@@ -22,6 +22,7 @@ func (c *Cart) DeleteCart(id uint) error {
 	if err != nil {
 		return err
 	}
+
 	return nil
 }
 
@@ -31,20 +32,21 @@ func (c *Cart) GetCart() ([]Cart, error) {
 	if err != nil {
 		return nil, err
 	}
+
 	return cart, nil
 }
 
 func (c *Cart) AddCart() error {
 	if err := config.DB.First(&Product{}, c.ProductID).Error; err != nil {
 		if errors.Is(err, gorm.ErrRecordNotFound) {
-			return errors.New("Product not found")
+			return errors.New("product not found")
 		}
 		return err
 	}
 
 	if err := config.DB.First(&User{}, c.UserID).Error; err != nil {
 		if errors.Is(err, gorm.ErrRecordNotFound) {
-			return errors.New("User not found")
+			return errors.New("user not found")
 		}
 		return err
 	}
@@ -56,9 +58,11 @@ func (c *Cart) AddCart() error {
 	if data.ID != 0 {
 		data.Quantity += c.Quantity
 		data.Total += c.Total
+
 		if err := config.DB.Save(&data).Error; err != nil {
 			return err
 		}
+
 		return nil
 	}
 

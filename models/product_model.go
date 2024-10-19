@@ -22,13 +22,11 @@ type Product struct {
 func (p *Product) GetProductById(uid uint) (*Product, error) {
 
 	err := config.DB.Model(Product{}).Where("id = ?", uid).Take(&p).Error
-
 	if err != nil {
 		return nil, err
 	}
 
 	err = config.DB.Preload("Category").Take(&p).Error
-
 	if err != nil {
 		return nil, err
 	}
@@ -37,7 +35,6 @@ func (p *Product) GetProductById(uid uint) (*Product, error) {
 }
 
 func (p *Product) DeleteProduct(id uint) error {
-
 	if err := config.DB.Where("id = ?", id).Delete(&Product{}).Error; err != nil {
 		return err
 	}
@@ -46,11 +43,10 @@ func (p *Product) DeleteProduct(id uint) error {
 }
 
 func (p *Product) UpdateProduct(id uint) error {
-
 	if p.CategoryID != 0 {
 		if err := config.DB.First(&Category{}, p.CategoryID).Error; err != nil {
 			if errors.Is(err, gorm.ErrRecordNotFound) {
-				return errors.New("Category not found")
+				return errors.New("category not found")
 			}
 			return err
 		}
@@ -64,7 +60,6 @@ func (p *Product) UpdateProduct(id uint) error {
 }
 
 func (p *Product) GetProduct() ([]Product, error) {
-
 	var pro []Product
 
 	if err := config.DB.Model(Product{}).Find(&pro).Error; err != nil {
@@ -72,7 +67,6 @@ func (p *Product) GetProduct() ([]Product, error) {
 	}
 
 	err := config.DB.Preload("Category").Find(&pro).Error
-
 	if err != nil {
 		return nil, err
 	}
@@ -94,7 +88,6 @@ func (p *Product) SaveProduct() error {
 	}
 
 	err := config.DB.Preload("Category").First(&p, p.ID).Error
-
 	if err != nil {
 		return err
 	}

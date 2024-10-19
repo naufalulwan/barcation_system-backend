@@ -11,19 +11,19 @@ import (
 
 func GetUserByIdController(c *gin.Context) {
 
-	var user_id uint
+	var userId uint
 	var err error
 
 	if c.Query("id") != "" {
 		uid, err := strconv.ParseUint(c.Query("id"), 10, 32)
-		user_id = uint(uid)
+		userId = uint(uid)
 
 		if err != nil {
 			c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": err.Error()})
 			return
 		}
 	} else {
-		user_id, err = handlers.ExtractTokenById(c)
+		userId, err = handlers.ExtractTokenById(c)
 	}
 
 	var u models.User
@@ -33,7 +33,7 @@ func GetUserByIdController(c *gin.Context) {
 		return
 	}
 
-	data, err := u.GetUserById(user_id)
+	data, err := u.GetUserById(userId)
 
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": err.Error()})

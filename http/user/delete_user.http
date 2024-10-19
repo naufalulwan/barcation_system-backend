@@ -1,0 +1,4 @@
+DELETE http://localhost:8080/api/user/delete_user?id=2
+Authorization: {{token}}
+Refresh-Token: {{refresh-token}}
+Content-Type: application/json

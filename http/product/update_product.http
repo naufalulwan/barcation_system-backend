@@ -1,0 +1,9 @@
+PUT http://localhost:8080/api/product/update_product
+Authorization: {{token}}
+Refresh-Token: {{refresh-token}}
+Content-Type: application/json
+
+{
+    "id": 7,
+    "status" : true
+}

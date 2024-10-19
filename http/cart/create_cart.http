@@ -1,0 +1,10 @@
+POST http://localhost:8080/api/cart/create_cart
+Authorization: {{token}}
+Refresh-Token: {{refresh-token}}
+Content-Type: application/json
+
+{
+    "quantity": 8,
+    "product_id": 7,
+    "user_id": 1
+}

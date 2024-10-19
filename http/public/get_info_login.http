@@ -1,0 +1,7 @@
+PUT http://localhost:8080/api/public/get_info_login
+
+{
+    "username" : "admin",
+    "device_id" : "Android AP31312Z",
+    "ssn" : "123123"
+}

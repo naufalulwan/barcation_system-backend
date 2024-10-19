@@ -1,0 +1,9 @@
+POST http://localhost:8080/api/category/create_category
+Authorization: {{token}}
+Refresh-Token: {{refresh-token}}
+Content-Type: application/json
+
+{
+    "name": "Minuman",
+    "icon": "0xe38c"
+}

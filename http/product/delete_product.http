@@ -1,0 +1,8 @@
+DELETE http://localhost:8080/api/product/delete_product
+Authorization: {{token}}
+Refresh-Token: {{refresh-token}}
+Content-Type: application/json
+
+{
+    "id": 3
+}

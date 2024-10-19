@@ -31,14 +31,20 @@ func main() {
 	config.LoadConfig()
 	config.SetupDatabase()
 
-	config.DB.AutoMigrate(&models.User{}, &models.Category{}, &models.Product{}, &models.Cart{})
+	err := config.DB.AutoMigrate(&models.User{}, &models.Category{}, &models.Product{}, &models.Cart{})
+	if err != nil {
+		return
+	}
 
 	gin.SetMode(gin.ReleaseMode)
 	r = gin.New()
 	r.Use(gin.Logger())
 
 	r.ForwardedByClientIP = true
-	r.SetTrustedProxies([]string{"0.0.0.0"})
+	err = r.SetTrustedProxies([]string{"0.0.0.0"})
+	if err != nil {
+		return
+	}
 
 	r.Use(func(c *gin.Context) {
 		c.Writer.Header().Set("Content-Type", "application/json")
@@ -66,7 +72,10 @@ func main() {
 
 	helper.Logger.Infof("\x1b[34mListening and serving HTTP on %s\x1b[0m", dns)
 
-	r.Run(dns)
+	err = r.Run(dns)
+	if err != nil {
+		return
+	}
 }
 
 func setRoute() {

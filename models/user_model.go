@@ -27,9 +27,7 @@ type User struct {
 }
 
 func (u *User) UpdateSaveInfoLogin() error {
-
 	err := config.DB.Model(&User{}).Where("id = ?", u.ID).Update("save_login", u.SaveLogin).Error
-
 	if err != nil {
 		return err
 	}
@@ -38,13 +36,11 @@ func (u *User) UpdateSaveInfoLogin() error {
 }
 
 func (u *User) UpdatePassword(password string) error {
-
 	hashedPassword, _ := bcrypt.GenerateFromPassword([]byte(password), bcrypt.DefaultCost)
 
 	u.Password = string(hashedPassword)
 
 	err := config.DB.Model(&User{}).Where("id = ?", u.ID).Updates(&u).Error
-
 	if err != nil {
 		return err
 	}
@@ -53,15 +49,12 @@ func (u *User) UpdatePassword(password string) error {
 }
 
 func (u *User) RecoveryUser(uid uint, status bool) error {
-
 	err := config.DB.Unscoped().Model(&User{}).Where("id = ?", uid).Update("deleted_at", nil).Update("status", status).Error
-
 	if err != nil {
 		return err
 	}
 
 	return nil
-
 }
 
 func (u *User) DeleteUser() error {
@@ -92,7 +85,6 @@ func (u *User) DeleteUser() error {
 
 func (u *User) UpdateUser() error {
 	err := config.DB.Model(&User{}).Where("id = ?", u.ID).Updates(&u).Error
-
 	if err != nil {
 		return err
 	}
@@ -100,9 +92,8 @@ func (u *User) UpdateUser() error {
 	return nil
 }
 
-func (u *User) GetUserByDeviceId(device_id, username string) (*User, error) {
-	err := config.DB.Model(User{}).Where("device_id = ?", device_id).Where("username = ?", username).Take(&u).Error
-
+func (u *User) GetUserByDeviceId(deviceId, username string) (*User, error) {
+	err := config.DB.Model(User{}).Where("device_id = ?", deviceId).Where("username = ?", username).Take(&u).Error
 	if err != nil {
 		return u, err
 	}
@@ -112,7 +103,15 @@ func (u *User) GetUserByDeviceId(device_id, username string) (*User, error) {
 
 func (u *User) GetUserById(uid uint) (*User, error) {
 	err := config.DB.Model(User{}).Where("id = ?", uid).Take(&u).Error
+	if err != nil {
+		return u, err
+	}
 
+	return u, nil
+}
+
+func (u *User) GetUserByDelete(uid uint) (*User, error) {
+	err := config.DB.Unscoped().Model(User{}).Where("id = ?", uid).Take(&u).Error
 	if err != nil {
 		return u, err
 	}
@@ -124,7 +123,6 @@ func (u *User) GetUser() ([]User, error) {
 	var users []User
 
 	err := config.DB.Model(User{}).Find(&users).Error
-
 	if err != nil {
 		return users, err
 	}
@@ -140,7 +138,6 @@ func (u *User) SaveUser() error {
 	var err error
 
 	hashedPassword, err := bcrypt.GenerateFromPassword([]byte(u.Password), bcrypt.DefaultCost)
-
 	if err != nil {
 		return err
 	}
@@ -149,7 +146,6 @@ func (u *User) SaveUser() error {
 	u.Username = html.EscapeString(strings.TrimSpace(u.Username))
 
 	err = config.DB.Create(&u).Error
-
 	if err != nil {
 		return err
 	}

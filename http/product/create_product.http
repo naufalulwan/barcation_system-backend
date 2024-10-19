@@ -1,0 +1,13 @@
+POST http://localhost:8080/api/product/create_product
+Authorization: {{token}}
+Refresh-Token: {{refresh-token}}
+Content-Type: application/json
+
+{
+    "name": "Caramel Latte",
+    "price": 25000,
+    "quantity": 10,
+    "description": "Lorem Ipsum",
+    "image": "image:null",
+    "category_id": 4
+}

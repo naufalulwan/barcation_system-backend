@@ -4,21 +4,31 @@ import (
 	"barcation_be/handlers"
 	"barcation_be/models"
 	"net/http"
+	"strconv"
 
 	"github.com/gin-gonic/gin"
 )
 
 func DeleteUserController(c *gin.Context) {
-	user_id, err := handlers.ExtractTokenById(c)
-	token, _ := handlers.ExtractToken(c)
+	var userId uint
+	var token string
 	var u models.User
+	var err error
 
-	if err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": err.Error()})
-		return
+	if c.Query("id") != "" {
+		uid, err := strconv.ParseUint(c.Query("id"), 10, 32)
+		userId = uint(uid)
+
+		if err != nil {
+			c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": err.Error()})
+			return
+		}
+	} else {
+		userId, err = handlers.ExtractTokenById(c)
+		token, _ = handlers.ExtractToken(c)
 	}
 
-	data, err := u.GetUserById(user_id)
+	data, err := u.GetUserById(userId)
 
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": err.Error()})
@@ -28,7 +38,10 @@ func DeleteUserController(c *gin.Context) {
 	data.Status = false
 
 	err = data.DeleteUser()
-	handlers.AddTokenToBlacklist(token)
+
+	if token != "" {
+		handlers.AddTokenToBlacklist(token)
+	}
 
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": err.Error()})
