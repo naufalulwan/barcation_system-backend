@@ -1,0 +1,6 @@
+GET http://localhost:8080/api/user/logout
+Authorization: {{token}}
+Refresh-Token: {{refresh-token}}
+Content-Type: application/json
+
+

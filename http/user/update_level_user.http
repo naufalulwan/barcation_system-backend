@@ -1,0 +1,9 @@
+PUT http://localhost:8080/api/user/update_level_user
+Authorization: {{token}}
+Refresh-Token: {{refresh-token}}
+Content-Type: application/json
+
+{
+    "id": 5,
+    "level": "admin"
+}

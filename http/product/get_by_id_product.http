@@ -1,0 +1,4 @@
+GET http://localhost:8080/api/product/get_product_by_id?id=4
+Authorization: {{token}}
+Refresh-Token: {{refresh-token}}
+Content-Type: application/json
