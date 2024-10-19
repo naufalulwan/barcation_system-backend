@@ -1,5 +1,0 @@
-{
-  "code": 400,
-  "error": true,
-  "message": "only admin can recovery user"
-}
