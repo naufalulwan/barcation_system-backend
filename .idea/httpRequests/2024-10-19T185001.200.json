@@ -1,0 +1,13 @@
+{
+  "code": 200,
+  "data": {
+    "product_name": "Nasi Goreng Spesial",
+    "product_price": 25000,
+    "status": true,
+    "total_price": 50000,
+    "total_quantity": 4,
+    "user_name": "naufalulwan"
+  },
+  "error": false,
+  "message": "success"
+}

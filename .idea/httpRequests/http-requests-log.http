@@ -1,0 +1,898 @@
+GET http://localhost:8080/api/inquiry/get_inquiry
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJTZWRhdGVsYWg2M0BnbWFpbC5jb20iLCJleHAiOjE3MjkzNDAzOTYsImxldmVsIjoiYWRtaW4iLCJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIn0.Tu3nWTn42U03RLKEOYTXv1t27o0frmy-oCuJ3_V6V-w
+Refresh-Token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJTZWRhdGVsYWg2M0BnbWFpbC5jb20iLCJleHAiOjE3Mjk0NDY1OTYsImxldmVsIjoiYWRtaW4iLCJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIn0.nc345u1Pzc1gnYn32Vl1yy_IjXvpWbTNnHUTx0MkmTU
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-19T185739.200.json
+
+###
+
+POST http://localhost:8080/api/inquiry/create_inquiry
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJTZWRhdGVsYWg2M0BnbWFpbC5jb20iLCJleHAiOjE3MjkzNDAzOTYsImxldmVsIjoiYWRtaW4iLCJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIn0.Tu3nWTn42U03RLKEOYTXv1t27o0frmy-oCuJ3_V6V-w
+Refresh-Token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJTZWRhdGVsYWg2M0BnbWFpbC5jb20iLCJleHAiOjE3Mjk0NDY1OTYsImxldmVsIjoiYWRtaW4iLCJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIn0.nc345u1Pzc1gnYn32Vl1yy_IjXvpWbTNnHUTx0MkmTU
+Content-Type: application/json
+Content-Length: 84
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "total_quantity": 4,
+  "total_price": 50000,
+  "product_id": 6,
+  "user_id": 2
+}
+
+<> 2024-10-19T185001.200.json
+
+###
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+Content-Length: 130
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "username": "admin",
+  "password": "Admin123*",
+  "device_id": "Android AP31312Z",
+  "ssn": "123123",
+  "is_save_info": true
+}
+
+<> 2024-10-19T184956.200.json
+
+###
+
+POST http://localhost:8080/api/inquiry/create_inquiry
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJTZWRhdGVsYWg2M0BnbWFpbC5jb20iLCJleHAiOjE3MjkzNDAxMDAsImxldmVsIjoiYWRtaW4iLCJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIn0.JLwrbs7T3oLj-QvAEEegZVl09zfQubq1l9HUO1IG6ck
+Refresh-Token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJTZWRhdGVsYWg2M0BnbWFpbC5jb20iLCJleHAiOjE3Mjk0NDYzMDAsImxldmVsIjoiYWRtaW4iLCJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIn0.yRXaGzzc3kt4ET7BEu3K9qShV2nsv0K_lpp7_POS4ZE
+Content-Type: application/json
+Content-Length: 84
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "total_quantity": 4,
+  "total_price": 50000,
+  "product_id": 6,
+  "user_id": 2
+}
+
+<> 2024-10-19T184509.400.json
+
+###
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+Content-Length: 130
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "username": "admin",
+  "password": "Admin123*",
+  "device_id": "Android AP31312Z",
+  "ssn": "123123",
+  "is_save_info": true
+}
+
+<> 2024-10-19T184500.200.json
+
+###
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+Content-Length: 130
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "username": "admin",
+  "password": "Admin123*",
+  "device_id": "Android AP31312Z",
+  "ssn": "123123",
+  "is_save_info": true
+}
+
+<> 2024-10-19T184332.200.json
+
+###
+
+POST http://localhost:8080/api/inquiry/create_inquiry
+Authorization:
+Refresh-Token:
+Content-Type: application/json
+Content-Length: 84
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "total_quantity": 4,
+  "total_price": 50000,
+  "product_id": 6,
+  "user_id": 2
+}
+
+<> 2024-10-19T184320.401.json
+
+###
+
+PUT http://localhost:8080/api/user/recovery_user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJTZWRhdGVsYWg2M0BnbWFpbC5jb20iLCJleHAiOjE3MjkyMDE1OTYsImxldmVsIjoidXNlciIsInVzZXJfaWQiOjEsInVzZXJuYW1lIjoiYWRtaW4ifQ.60MS7tY-RzC1p3bJ1U78X3jPN1moWa0gBNrsiMYj6ps
+Refresh-Token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJTZWRhdGVsYWg2M0BnbWFpbC5jb20iLCJleHAiOjE3MjkzMDc3OTYsImxldmVsIjoidXNlciIsInVzZXJfaWQiOjEsInVzZXJuYW1lIjoiYWRtaW4ifQ.3EhYSw5wlrC6GHD7HnQTjeSg9W5mxFYnlikSeKFvHmI
+Content-Type: application/json
+Content-Length: 37
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "id" : 1,
+    "status" : true
+}
+
+<> 2024-10-18T041710.200.json
+
+###
+
+PUT http://localhost:8080/api/user/recovery_user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJTZWRhdGVsYWg2M0BnbWFpbC5jb20iLCJleHAiOjE3MjkyMDE1OTYsImxldmVsIjoidXNlciIsInVzZXJfaWQiOjEsInVzZXJuYW1lIjoiYWRtaW4ifQ.60MS7tY-RzC1p3bJ1U78X3jPN1moWa0gBNrsiMYj6ps
+Refresh-Token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJTZWRhdGVsYWg2M0BnbWFpbC5jb20iLCJleHAiOjE3MjkzMDc3OTYsImxldmVsIjoidXNlciIsInVzZXJfaWQiOjEsInVzZXJuYW1lIjoiYWRtaW4ifQ.3EhYSw5wlrC6GHD7HnQTjeSg9W5mxFYnlikSeKFvHmI
+Content-Type: application/json
+Content-Length: 37
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "id" : 2,
+    "status" : true
+}
+
+<> 2024-10-18T041706.200.json
+
+###
+
+PUT http://localhost:8080/api/user/recovery_user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJTZWRhdGVsYWg2M0BnbWFpbC5jb20iLCJleHAiOjE3MjkyMDE1OTYsImxldmVsIjoidXNlciIsInVzZXJfaWQiOjEsInVzZXJuYW1lIjoiYWRtaW4ifQ.60MS7tY-RzC1p3bJ1U78X3jPN1moWa0gBNrsiMYj6ps
+Refresh-Token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJTZWRhdGVsYWg2M0BnbWFpbC5jb20iLCJleHAiOjE3MjkzMDc3OTYsImxldmVsIjoidXNlciIsInVzZXJfaWQiOjEsInVzZXJuYW1lIjoiYWRtaW4ifQ.3EhYSw5wlrC6GHD7HnQTjeSg9W5mxFYnlikSeKFvHmI
+Content-Type: application/json
+Content-Length: 37
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "id" : 3,
+    "status" : true
+}
+
+<> 2024-10-18T041703.404.json
+
+###
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+Content-Length: 130
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "username": "admin",
+  "password": "Admin123*",
+  "device_id": "Android AP31312Z",
+  "ssn": "123123",
+  "is_save_info": true
+}
+
+<> 2024-10-18T041636.200.json
+
+###
+
+PUT http://localhost:8080/api/user/recovery_user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJTZWRhdGVsYWg2M0BnbWFpbC5jb20iLCJleHAiOjE3MjkyMDE1NTYsImxldmVsIjoidXNlciIsInVzZXJfaWQiOjEsInVzZXJuYW1lIjoiYWRtaW4ifQ.Wm6bWm85WRDmnKM8LtU7YL_zyiZyikNAz9hTzXXoB2A
+Refresh-Token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJTZWRhdGVsYWg2M0BnbWFpbC5jb20iLCJleHAiOjE3MjkzMDc3NTYsImxldmVsIjoidXNlciIsInVzZXJfaWQiOjEsInVzZXJuYW1lIjoiYWRtaW4ifQ.nh6TibC6rfr69YwZpW9UKvHS3yML5rgUa-KDSz8ZuG8
+Content-Type: application/json
+Content-Length: 37
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "id" : 3,
+    "status" : true
+}
+
+<> 2024-10-18T041628.400.json
+
+###
+
+PUT http://localhost:8080/api/user/recovery_user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJTZWRhdGVsYWg2M0BnbWFpbC5jb20iLCJleHAiOjE3MjkyMDE1NTYsImxldmVsIjoidXNlciIsInVzZXJfaWQiOjEsInVzZXJuYW1lIjoiYWRtaW4ifQ.Wm6bWm85WRDmnKM8LtU7YL_zyiZyikNAz9hTzXXoB2A
+Refresh-Token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJTZWRhdGVsYWg2M0BnbWFpbC5jb20iLCJleHAiOjE3MjkzMDc3NTYsImxldmVsIjoidXNlciIsInVzZXJfaWQiOjEsInVzZXJuYW1lIjoiYWRtaW4ifQ.nh6TibC6rfr69YwZpW9UKvHS3yML5rgUa-KDSz8ZuG8
+Content-Type: application/json
+Content-Length: 37
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "id" : 1,
+    "status" : true
+}
+
+<> 2024-10-18T041620.400.json
+
+###
+
+DELETE http://localhost:8080/api/user/delete_user?id=2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJTZWRhdGVsYWg2M0BnbWFpbC5jb20iLCJleHAiOjE3MjkyMDE1NTYsImxldmVsIjoidXNlciIsInVzZXJfaWQiOjEsInVzZXJuYW1lIjoiYWRtaW4ifQ.Wm6bWm85WRDmnKM8LtU7YL_zyiZyikNAz9hTzXXoB2A
+Refresh-Token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJTZWRhdGVsYWg2M0BnbWFpbC5jb20iLCJleHAiOjE3MjkzMDc3NTYsImxldmVsIjoidXNlciIsInVzZXJfaWQiOjEsInVzZXJuYW1lIjoiYWRtaW4ifQ.nh6TibC6rfr69YwZpW9UKvHS3yML5rgUa-KDSz8ZuG8
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-18T041609.200.json
+
+###
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+Content-Length: 130
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "username": "admin",
+  "password": "Admin123*",
+  "device_id": "Android AP31312Z",
+  "ssn": "123123",
+  "is_save_info": true
+}
+
+<> 2024-10-18T041556.200.json
+
+###
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+Content-Length: 133
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "username": "admin",
+  "password": "Adanofal123*",
+  "device_id": "Android AP31312Z",
+  "ssn": "123123",
+  "is_save_info": true
+}
+
+<> 2024-10-18T041548.401.json
+
+###
+
+PUT http://localhost:8080/api/user/recovery_user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTIwMDI2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.I3tdVe60pyHZVI50_wAG8hgd_sjzZGh5hVw_FZv4wk0
+Refresh-Token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTMwNjQ2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.AQzdJ_k8iE5KyGekQnC1wigUnrg4Y6opDZG7D79NSz8
+Content-Type: application/json
+Content-Length: 37
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "id" : 1,
+    "status" : true
+}
+
+<> 2024-10-18T041445.200.json
+
+###
+
+PUT http://localhost:8080/api/user/recovery_user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTIwMDI2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.I3tdVe60pyHZVI50_wAG8hgd_sjzZGh5hVw_FZv4wk0
+Refresh-Token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTMwNjQ2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.AQzdJ_k8iE5KyGekQnC1wigUnrg4Y6opDZG7D79NSz8
+Content-Type: application/json
+Content-Length: 37
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "id" : 3,
+    "status" : true
+}
+
+<> 2024-10-18T041441.404.json
+
+###
+
+PUT http://localhost:8080/api/user/recovery_user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTIwMDI2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.I3tdVe60pyHZVI50_wAG8hgd_sjzZGh5hVw_FZv4wk0
+Refresh-Token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTMwNjQ2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.AQzdJ_k8iE5KyGekQnC1wigUnrg4Y6opDZG7D79NSz8
+Content-Type: application/json
+Content-Length: 37
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "id" : 2,
+    "status" : true
+}
+
+<> 2024-10-18T041437.200.json
+
+###
+
+PUT http://localhost:8080/api/user/recovery_user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTIwMDI2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.I3tdVe60pyHZVI50_wAG8hgd_sjzZGh5hVw_FZv4wk0
+Refresh-Token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTMwNjQ2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.AQzdJ_k8iE5KyGekQnC1wigUnrg4Y6opDZG7D79NSz8
+Content-Type: application/json
+Content-Length: 37
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "id" : 1,
+    "status" : true
+}
+
+<> 2024-10-18T041432.200.json
+
+###
+
+PUT http://localhost:8080/api/user/recovery_user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTIwMDI2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.I3tdVe60pyHZVI50_wAG8hgd_sjzZGh5hVw_FZv4wk0
+Refresh-Token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTMwNjQ2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.AQzdJ_k8iE5KyGekQnC1wigUnrg4Y6opDZG7D79NSz8
+Content-Type: application/json
+Content-Length: 37
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "id" : 1,
+    "status" : true
+}
+
+<> 2024-10-18T041041.404.json
+
+###
+
+PUT http://localhost:8080/api/user/recovery_user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTIwMDI2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.I3tdVe60pyHZVI50_wAG8hgd_sjzZGh5hVw_FZv4wk0
+Refresh-Token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTMwNjQ2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.AQzdJ_k8iE5KyGekQnC1wigUnrg4Y6opDZG7D79NSz8
+Content-Type: application/json
+Content-Length: 37
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "id" : 2,
+    "status" : true
+}
+
+<> 2024-10-18T041038.200.json
+
+###
+
+PUT http://localhost:8080/api/user/recovery_user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTIwMDI2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.I3tdVe60pyHZVI50_wAG8hgd_sjzZGh5hVw_FZv4wk0
+Refresh-Token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTMwNjQ2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.AQzdJ_k8iE5KyGekQnC1wigUnrg4Y6opDZG7D79NSz8
+Content-Type: application/json
+Content-Length: 37
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "id" : 3,
+    "status" : true
+}
+
+<> 2024-10-18T041035.404.json
+
+###
+
+PUT http://localhost:8080/api/user/recovery_user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTIwMDI2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.I3tdVe60pyHZVI50_wAG8hgd_sjzZGh5hVw_FZv4wk0
+Refresh-Token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTMwNjQ2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.AQzdJ_k8iE5KyGekQnC1wigUnrg4Y6opDZG7D79NSz8
+Content-Type: application/json
+Content-Length: 37
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "id" : 1,
+    "status" : true
+}
+
+<> 2024-10-18T040840.404.json
+
+###
+
+PUT http://localhost:8080/api/user/recovery_user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTIwMDI2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.I3tdVe60pyHZVI50_wAG8hgd_sjzZGh5hVw_FZv4wk0
+Refresh-Token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTMwNjQ2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.AQzdJ_k8iE5KyGekQnC1wigUnrg4Y6opDZG7D79NSz8
+Content-Type: application/json
+Content-Length: 37
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "id" : 1,
+    "status" : true
+}
+
+<> 2024-10-18T040839.404.json
+
+###
+
+PUT http://localhost:8080/api/user/recovery_user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTIwMDI2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.I3tdVe60pyHZVI50_wAG8hgd_sjzZGh5hVw_FZv4wk0
+Refresh-Token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTMwNjQ2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.AQzdJ_k8iE5KyGekQnC1wigUnrg4Y6opDZG7D79NSz8
+Content-Type: application/json
+Content-Length: 37
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "id" : 3,
+    "status" : true
+}
+
+<> 2024-10-18T040835.404.json
+
+###
+
+PUT http://localhost:8080/api/user/recovery_user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTIwMDI2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.I3tdVe60pyHZVI50_wAG8hgd_sjzZGh5hVw_FZv4wk0
+Refresh-Token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTMwNjQ2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.AQzdJ_k8iE5KyGekQnC1wigUnrg4Y6opDZG7D79NSz8
+Content-Type: application/json
+Content-Length: 37
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "id" : 2,
+    "status" : true
+}
+
+<> 2024-10-18T040832.200.json
+
+###
+
+PUT http://localhost:8080/api/user/recovery_user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTIwMDI2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.I3tdVe60pyHZVI50_wAG8hgd_sjzZGh5hVw_FZv4wk0
+Refresh-Token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTMwNjQ2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.AQzdJ_k8iE5KyGekQnC1wigUnrg4Y6opDZG7D79NSz8
+Content-Type: application/json
+Content-Length: 37
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "id" : 1,
+    "status" : true
+}
+
+<> 2024-10-18T040323.404.json
+
+###
+
+PUT http://localhost:8080/api/user/recovery_user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTIwMDI2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.I3tdVe60pyHZVI50_wAG8hgd_sjzZGh5hVw_FZv4wk0
+Refresh-Token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTMwNjQ2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.AQzdJ_k8iE5KyGekQnC1wigUnrg4Y6opDZG7D79NSz8
+Content-Type: application/json
+Content-Length: 37
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "id" : 3,
+    "status" : true
+}
+
+<> 2024-10-18T040320.404.json
+
+###
+
+PUT http://localhost:8080/api/user/recovery_user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTIwMDI2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.I3tdVe60pyHZVI50_wAG8hgd_sjzZGh5hVw_FZv4wk0
+Refresh-Token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTMwNjQ2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.AQzdJ_k8iE5KyGekQnC1wigUnrg4Y6opDZG7D79NSz8
+Content-Type: application/json
+Content-Length: 37
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "id" : 2,
+    "status" : true
+}
+
+<> 2024-10-18T040314.200.json
+
+###
+
+PUT http://localhost:8080/api/user/recovery_user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTIwMDI2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.I3tdVe60pyHZVI50_wAG8hgd_sjzZGh5hVw_FZv4wk0
+Refresh-Token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTMwNjQ2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.AQzdJ_k8iE5KyGekQnC1wigUnrg4Y6opDZG7D79NSz8
+Content-Type: application/json
+Content-Length: 37
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "id" : 1,
+    "status" : true
+}
+
+<> 2024-10-18T040310.404.json
+
+###
+
+PUT http://localhost:8080/api/user/recovery_user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTIwMDI2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.I3tdVe60pyHZVI50_wAG8hgd_sjzZGh5hVw_FZv4wk0
+Refresh-Token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTMwNjQ2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.AQzdJ_k8iE5KyGekQnC1wigUnrg4Y6opDZG7D79NSz8
+Content-Type: application/json
+Content-Length: 37
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "id" : 1,
+    "status" : true
+}
+
+<> 2024-10-18T040135.404.json
+
+###
+
+PUT http://localhost:8080/api/user/recovery_user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTIwMDI2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.I3tdVe60pyHZVI50_wAG8hgd_sjzZGh5hVw_FZv4wk0
+Refresh-Token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTMwNjQ2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.AQzdJ_k8iE5KyGekQnC1wigUnrg4Y6opDZG7D79NSz8
+Content-Type: application/json
+Content-Length: 37
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "id" : 2,
+    "status" : true
+}
+
+<> 2024-10-18T040025.200.json
+
+###
+
+PUT http://localhost:8080/api/user/recovery_user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTIwMDI2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.I3tdVe60pyHZVI50_wAG8hgd_sjzZGh5hVw_FZv4wk0
+Refresh-Token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTMwNjQ2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.AQzdJ_k8iE5KyGekQnC1wigUnrg4Y6opDZG7D79NSz8
+Content-Type: application/json
+Content-Length: 37
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "id" : 1,
+    "status" : true
+}
+
+<> 2024-10-18T040022.404.json
+
+###
+
+PUT http://localhost:8080/api/user/recovery_user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTIwMDI2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.I3tdVe60pyHZVI50_wAG8hgd_sjzZGh5hVw_FZv4wk0
+Refresh-Token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTMwNjQ2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.AQzdJ_k8iE5KyGekQnC1wigUnrg4Y6opDZG7D79NSz8
+Content-Type: application/json
+Content-Length: 37
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "id" : 1,
+    "status" : true
+}
+
+<> 2024-10-18T040017.404.json
+
+###
+
+PUT http://localhost:8080/api/user/recovery_user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTIwMDI2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.I3tdVe60pyHZVI50_wAG8hgd_sjzZGh5hVw_FZv4wk0
+Refresh-Token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTMwNjQ2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.AQzdJ_k8iE5KyGekQnC1wigUnrg4Y6opDZG7D79NSz8
+Content-Type: application/json
+Content-Length: 37
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "id" : 1,
+    "status" : true
+}
+
+<> 2024-10-18T035658.404.json
+
+###
+
+PUT http://localhost:8080/api/user/recovery_user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTIwMDI2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.I3tdVe60pyHZVI50_wAG8hgd_sjzZGh5hVw_FZv4wk0
+Refresh-Token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTMwNjQ2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.AQzdJ_k8iE5KyGekQnC1wigUnrg4Y6opDZG7D79NSz8
+Content-Type: application/json
+Content-Length: 37
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "id" : 1,
+    "status" : true
+}
+
+<> 2024-10-18T035654.404.json
+
+###
+
+PUT http://localhost:8080/api/user/recovery_user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTIwMDI2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.I3tdVe60pyHZVI50_wAG8hgd_sjzZGh5hVw_FZv4wk0
+Refresh-Token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTMwNjQ2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.AQzdJ_k8iE5KyGekQnC1wigUnrg4Y6opDZG7D79NSz8
+Content-Type: application/json
+Content-Length: 37
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "id" : 2,
+    "status" : true
+}
+
+<> 2024-10-18T035650.200.json
+
+###
+
+DELETE http://localhost:8080/api/user/delete_user?id=1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTIwMDI2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.I3tdVe60pyHZVI50_wAG8hgd_sjzZGh5hVw_FZv4wk0
+Refresh-Token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTMwNjQ2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.AQzdJ_k8iE5KyGekQnC1wigUnrg4Y6opDZG7D79NSz8
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-18T035627.200.json
+
+###
+
+PUT http://localhost:8080/api/user/recovery_user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTIwMDI2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.I3tdVe60pyHZVI50_wAG8hgd_sjzZGh5hVw_FZv4wk0
+Refresh-Token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTMwNjQ2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.AQzdJ_k8iE5KyGekQnC1wigUnrg4Y6opDZG7D79NSz8
+Content-Type: application/json
+Content-Length: 37
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "id" : 1,
+    "status" : true
+}
+
+<> 2024-10-18T035605.200.json
+
+###
+
+PUT http://localhost:8080/api/user/recovery_user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTIwMDI2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.I3tdVe60pyHZVI50_wAG8hgd_sjzZGh5hVw_FZv4wk0
+Refresh-Token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTMwNjQ2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.AQzdJ_k8iE5KyGekQnC1wigUnrg4Y6opDZG7D79NSz8
+Content-Type: application/json
+Content-Length: 37
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "id" : 2,
+    "status" : true
+}
+
+<> 2024-10-18T035601.200.json
+
+###
+
+PUT http://localhost:8080/api/user/recovery_user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTIwMDI2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.I3tdVe60pyHZVI50_wAG8hgd_sjzZGh5hVw_FZv4wk0
+Refresh-Token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTMwNjQ2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.AQzdJ_k8iE5KyGekQnC1wigUnrg4Y6opDZG7D79NSz8
+Content-Type: application/json
+Content-Length: 37
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "id" : 2,
+    "status" : true
+}
+
+<> 2024-10-18T035548.400.json
+
+###
+
+PUT http://localhost:8080/api/user/recovery_user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTIwMDI2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.I3tdVe60pyHZVI50_wAG8hgd_sjzZGh5hVw_FZv4wk0
+Refresh-Token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTMwNjQ2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.AQzdJ_k8iE5KyGekQnC1wigUnrg4Y6opDZG7D79NSz8
+Content-Type: application/json
+Content-Length: 37
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "id" : 1,
+    "status" : true
+}
+
+<> 2024-10-18T035543.400.json
+
+###
+
+PUT http://localhost:8080/api/user/recovery_user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTIwMDI2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.I3tdVe60pyHZVI50_wAG8hgd_sjzZGh5hVw_FZv4wk0
+Refresh-Token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTMwNjQ2OSwibGV2ZWwiOiJ1c2VyIiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJuYXVmYWx1bHdhbiJ9.AQzdJ_k8iE5KyGekQnC1wigUnrg4Y6opDZG7D79NSz8
+Content-Type: application/json
+Content-Length: 37
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "id" : 1,
+    "status" : true
+}
+
+<> 2024-10-18T035433.400.json
+
+###
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+Content-Length: 137
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "username": "naufalulwan",
+  "password": "Sedate123*",
+  "device_id": "Android AP31312Z",
+  "ssn": "123123",
+  "is_save_info": true
+}
+
+<> 2024-10-18T035429.200.json
+
+###
+
+PUT http://localhost:8080/api/user/recovery_user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTIwMDA5OSwibGV2ZWwiOiJhZG1pbiIsInVzZXJfaWQiOjIsInVzZXJuYW1lIjoibmF1ZmFsdWx3YW4ifQ.M2REzB8JnJxMZUDmdZoh8APSxQe35EMxZR4g20vMq18
+Refresh-Token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTMwNjI5OSwibGV2ZWwiOiJhZG1pbiIsInVzZXJfaWQiOjIsInVzZXJuYW1lIjoibmF1ZmFsdWx3YW4ifQ.tyonFSuE3lZhkP4hZx5OEoIihx71vrzASia7ldvWBjM
+Content-Type: application/json
+Content-Length: 37
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "id" : 1,
+    "status" : true
+}
+
+<> 2024-10-18T035357.400.json
+
+###
+
+PUT http://localhost:8080/api/user/recovery_user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTIwMDA5OSwibGV2ZWwiOiJhZG1pbiIsInVzZXJfaWQiOjIsInVzZXJuYW1lIjoibmF1ZmFsdWx3YW4ifQ.M2REzB8JnJxMZUDmdZoh8APSxQe35EMxZR4g20vMq18
+Refresh-Token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTMwNjI5OSwibGV2ZWwiOiJhZG1pbiIsInVzZXJfaWQiOjIsInVzZXJuYW1lIjoibmF1ZmFsdWx3YW4ifQ.tyonFSuE3lZhkP4hZx5OEoIihx71vrzASia7ldvWBjM
+Content-Type: application/json
+Content-Length: 37
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "id" : 2,
+    "status" : true
+}
+
+<> 2024-10-18T035256.200.json
+
+###
+
+PUT http://localhost:8080/api/user/recovery_user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTIwMDA5OSwibGV2ZWwiOiJhZG1pbiIsInVzZXJfaWQiOjIsInVzZXJuYW1lIjoibmF1ZmFsdWx3YW4ifQ.M2REzB8JnJxMZUDmdZoh8APSxQe35EMxZR4g20vMq18
+Refresh-Token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTMwNjI5OSwibGV2ZWwiOiJhZG1pbiIsInVzZXJfaWQiOjIsInVzZXJuYW1lIjoibmF1ZmFsdWx3YW4ifQ.tyonFSuE3lZhkP4hZx5OEoIihx71vrzASia7ldvWBjM
+Content-Type: application/json
+Content-Length: 37
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "id" : 1,
+    "status" : true
+}
+
+<> 2024-10-18T035251.400.json
+
+###
+
+PUT http://localhost:8080/api/user/recovery_user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTIwMDA5OSwibGV2ZWwiOiJhZG1pbiIsInVzZXJfaWQiOjIsInVzZXJuYW1lIjoibmF1ZmFsdWx3YW4ifQ.M2REzB8JnJxMZUDmdZoh8APSxQe35EMxZR4g20vMq18
+Refresh-Token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTMwNjI5OSwibGV2ZWwiOiJhZG1pbiIsInVzZXJfaWQiOjIsInVzZXJuYW1lIjoibmF1ZmFsdWx3YW4ifQ.tyonFSuE3lZhkP4hZx5OEoIihx71vrzASia7ldvWBjM
+Content-Type: application/json
+Content-Length: 37
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "id" : 2,
+    "status" : true
+}
+
+<> 2024-10-18T035242.200.json
+
+###
+
+PUT http://localhost:8080/api/user/recovery_user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTIwMDA5OSwibGV2ZWwiOiJhZG1pbiIsInVzZXJfaWQiOjIsInVzZXJuYW1lIjoibmF1ZmFsdWx3YW4ifQ.M2REzB8JnJxMZUDmdZoh8APSxQe35EMxZR4g20vMq18
+Refresh-Token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJuYXVmYWx1bHdhbjYzQGdtYWlsLmNvbSIsImV4cCI6MTcyOTMwNjI5OSwibGV2ZWwiOiJhZG1pbiIsInVzZXJfaWQiOjIsInVzZXJuYW1lIjoibmF1ZmFsdWx3YW4ifQ.tyonFSuE3lZhkP4hZx5OEoIihx71vrzASia7ldvWBjM
+Content-Type: application/json
+Content-Length: 37
+User-Agent: IntelliJ HTTP Client/GoLand 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+    "id" : 1,
+    "status" : true
+}
+
+<> 2024-10-18T035230.400.json
+
+###
+

@@ -1,0 +1,17 @@
+{
+  "authorization": {
+    "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJTZWRhdGVsYWg2M0BnbWFpbC5jb20iLCJleHAiOjE3MjkzMDc3NTYsImxldmVsIjoidXNlciIsInVzZXJfaWQiOjEsInVzZXJuYW1lIjoiYWRtaW4ifQ.nh6TibC6rfr69YwZpW9UKvHS3yML5rgUa-KDSz8ZuG8",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZpY2VfaWQiOiJBbmRyb2lkIEFQMzEzMTJaIiwiZW1haWwiOiJTZWRhdGVsYWg2M0BnbWFpbC5jb20iLCJleHAiOjE3MjkyMDE1NTYsImxldmVsIjoidXNlciIsInVzZXJfaWQiOjEsInVzZXJuYW1lIjoiYWRtaW4ifQ.Wm6bWm85WRDmnKM8LtU7YL_zyiZyikNAz9hTzXXoB2A",
+    "type": "Bearer"
+  },
+  "code": 200,
+  "error": false,
+  "id": 1,
+  "message": "login success",
+  "user": {
+    "email": "Sedatelah63@gmail.com",
+    "level": "user",
+    "status": true,
+    "username": "admin"
+  }
+}

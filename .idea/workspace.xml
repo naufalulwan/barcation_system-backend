@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4c95a219-c746-48b3-8abe-8e9eae8bca74" name="Changes" comment=".gitignore">
+      <change afterPath="$PROJECT_DIR$/controllers/inquiry/create_inquiry_controller.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/inquiry/delete_inquiry_controller.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/inquiry/get_inquiry_by_id_controller.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/inquiry/get_inquiry_controller.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/inquiry/update_inquiry_controller.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http/inquiry/create_inquiry.http" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http/inquiry/get_inquiry.http" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/inquiry_model.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.go" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/cart/create_cart_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/cart/create_cart_controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/cart/delete_cart_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/cart/delete_cart_controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/product/create_product_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/product/create_product_controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/product/delete_product_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/product/delete_product_controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/product/get_product_by_id_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/product/get_product_by_id_controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/product/get_product_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/product/get_product_controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/product/update_product_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/product/update_product_controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/product_model.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/product_model.go" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTTP Private Environment File" />
+        <option value="HTTP Public Environment File" />
+        <option value="Go File" />
+        <option value="HTTP Request" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" url="file://C:/Program Files/Go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;naufalulwan&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://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@github.com/naufalulwan/barcation_system-backend.git&quot;,
+    &quot;accountId&quot;: &quot;a78d2239-45aa-4a1d-9ea7-f901cb35651f&quot;
+  }
+}</component>
+  <component name="HttpClientSelectedEnvironments">
+    <file url="jar://$APPLICATION_HOME_DIR$/plugins/restClient/lib/restClient.jar!/com/intellij/ws/rest/client/requests/collection/post-requests.http" environment="test" />
+    <file url="file://$PROJECT_DIR$/http/auth/login.http" environment="dev" />
+    <file url="file://$PROJECT_DIR$/http/auth/logout.http" environment="dev" />
+    <file url="file://$PROJECT_DIR$/http/cart/create_cart.http" environment="dev" />
+    <file url="file://$PROJECT_DIR$/http/cart/delete_cart.http" environment="dev" />
+    <file url="file://$PROJECT_DIR$/http/cart/get_cart.http" environment="dev" />
+    <file url="file://$PROJECT_DIR$/http/category/create_category.http" environment="dev" />
+    <file url="file://$PROJECT_DIR$/http/category/delete_category.http" environment="dev" />
+    <file url="file://$PROJECT_DIR$/http/category/get_category.http" environment="dev" />
+    <file url="file://$PROJECT_DIR$/http/category/update_category.http" environment="dev" />
+    <file url="file://$PROJECT_DIR$/http/product/get_product.http" environment="dev" />
+    <file url="file://$PROJECT_DIR$/http/product/update_product.http" environment="dev" />
+    <file url="file://$PROJECT_DIR$/http/product/create_product.http" environment="dev" />
+    <file url="file://$PROJECT_DIR$/http/product/get_by_id_product.http" environment="dev" />
+    <file url="file://$PROJECT_DIR$/http/user/get_user.http" environment="dev" />
+    <file url="file://$PROJECT_DIR$/http/user/get_by_id_user.http" environment="dev" />
+    <file url="file://$PROJECT_DIR$/http/user/update_user.http" environment="dev" />
+    <file url="file://$PROJECT_DIR$/http/user/delete_user.http" environment="dev" />
+    <file url="file://$PROJECT_DIR$/http/user/recovery_user.http" environment="dev" />
+    <file url="file://$PROJECT_DIR$/http/user/update_level_user.http" environment="dev" />
+    <file url="file://$PROJECT_DIR$/http/user/update_password_user.http" environment="dev" />
+    <file url="file://$PROJECT_DIR$/http/product/delete_product.http" environment="dev" />
+    <file url="file://$PROJECT_DIR$/http/inquiry/get_inquiry.http" environment="dev" />
+    <file url="file://$PROJECT_DIR$/http/inquiry/create_inquiry.http" environment="dev" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2nZkjjjg7eqoVpkiZzXqIs041FC" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "DefaultGoTemplateProperty": "Go File",
+    "Docker.Unnamed.executor": "Run",
+    "Docker.barcation.executor": "Run",
+    "Go Build.go build barcation_be.executor": "Debug",
+    "HTTP Request.All in create_cart.executor": "Run",
+    "HTTP Request.All in create_inquiry.executor": "Run",
+    "HTTP Request.All in delete_user.executor": "Run",
+    "HTTP Request.All in get_by_id_product.executor": "Run",
+    "HTTP Request.All in get_by_id_user.executor": "Run",
+    "HTTP Request.All in get_cart.executor": "Run",
+    "HTTP Request.All in get_info_login.executor": "Run",
+    "HTTP Request.All in get_inquiry.executor": "Run",
+    "HTTP Request.All in get_user.executor": "Run",
+    "HTTP Request.All in login.executor": "Run",
+    "HTTP Request.All in logout.executor": "Run",
+    "HTTP Request.All in recovery_user.executor": "Run",
+    "HTTP Request.All in register.executor": "Run",
+    "HTTP Request.All in update_category.executor": "Run",
+    "HTTP Request.All in update_product.executor": "Run",
+    "HTTP Request.get_token_device | #1.executor": "Run",
+    "HTTP Request.login | #1.executor": "Run",
+    "HTTP Request.logout | #1.executor": "Run",
+    "HTTP Request.register | #1.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "git-widget-placeholder": "master",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "D:/barcation_system/backend/Dockerfile",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "rest.client.default.execution.environment": "dev",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\barcation_system\backend\http" />
+      <recent name="D:\barcation_system\backend\http\auth" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go Build.go build barcation_be">
+    <configuration name="go build barcation_be" type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
+      <module name="backend" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="barcation_be" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="All in create_inquiry" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/http/inquiry/create_inquiry.http">
+      <method v="2" />
+    </configuration>
+    <configuration name="All in delete_user" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/http/user/delete_user.http">
+      <method v="2" />
+    </configuration>
+    <configuration name="All in get_inquiry" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/http/inquiry/get_inquiry.http">
+      <method v="2" />
+    </configuration>
+    <configuration name="All in login" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/http/auth/login.http">
+      <method v="2" />
+    </configuration>
+    <configuration name="All in recovery_user" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/http/user/recovery_user.http">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Go Build.go build barcation_be" />
+      <item itemvalue="HTTP Request.All in create_inquiry" />
+      <item itemvalue="HTTP Request.All in get_inquiry" />
+      <item itemvalue="HTTP Request.All in delete_user" />
+      <item itemvalue="HTTP Request.All in login" />
+      <item itemvalue="HTTP Request.All in recovery_user" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.All in get_inquiry" />
+        <item itemvalue="HTTP Request.All in create_inquiry" />
+        <item itemvalue="HTTP Request.All in login" />
+        <item itemvalue="HTTP Request.All in recovery_user" />
+        <item itemvalue="HTTP Request.All in delete_user" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-gosdk-5df93f7ad4aa-df9ad98b711f-org.jetbrains.plugins.go.sharedIndexes.bundled-GO-242.23339.24" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-GO-242.23339.24" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fixing dan prettier kodingan" />
+    <MESSAGE value=".gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value=".gitignore" />
+  </component>
+  <component name="VgoProject">
+    <settings-migrated>true</settings-migrated>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/main.go</url>
+          <line>13</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
