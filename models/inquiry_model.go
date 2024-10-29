@@ -23,7 +23,7 @@ func (i *Inquiry) GetInquiryById(ID uint) (*Inquiry, error) {
 		return nil, err
 	}
 
-	err = config.DB.Preload("Inquiry").Take(&i).Error
+	err = config.DB.Preload("User").Preload("Product").Take(&i).Error
 	if err != nil {
 		return nil, err
 	}
@@ -73,7 +73,7 @@ func (i *Inquiry) CreateInquiry() error {
 	return nil
 }
 
-func (i *Inquiry) UpdateInquiry(Id uint) error {
+func (i *Inquiry) UpdateInquiry(ID uint) error {
 	if err := config.DB.First(&Product{}, i.ProductID).Error; err != nil {
 		if errors.Is(err, gorm.ErrRecordNotFound) {
 			return errors.New("product not found")
@@ -88,15 +88,15 @@ func (i *Inquiry) UpdateInquiry(Id uint) error {
 		return err
 	}
 
-	if err := config.DB.Model(&Inquiry{}).Where("id = ?", Id).Updates(&i).Error; err != nil {
+	if err := config.DB.Model(&Inquiry{}).Where("id = ?", ID).Updates(&i).Error; err != nil {
 		return err
 	}
 
 	return nil
 }
 
-func (i *Inquiry) DeleteInquiry(Id uint) error {
-	if err := config.DB.Where("id = ?", Id).Delete(&Inquiry{}).Error; err != nil {
+func (i *Inquiry) DeleteInquiry(ID uint) error {
+	if err := config.DB.Where("id = ?", ID).Delete(&Inquiry{}).Error; err != nil {
 		return err
 	}
 

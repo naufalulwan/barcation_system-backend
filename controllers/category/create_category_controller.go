@@ -15,18 +15,17 @@ type createCategoryRequest struct {
 }
 
 func CreateCategoryController(c *gin.Context) {
-	admin_id, err := handlers.ExtractTokenById(c)
 	var cat models.Category
 	var u models.User
 	var request createCategoryRequest
 
+	adminId, err := handlers.ExtractTokenById(c)
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": err.Error()})
 		return
 	}
 
-	dataAdmin, err := u.GetUserById(admin_id)
-
+	dataAdmin, err := u.GetUserById(adminId)
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": err.Error()})
 		return
@@ -46,12 +45,10 @@ func CreateCategoryController(c *gin.Context) {
 	cat.Icon = request.Icon
 
 	err = cat.SaveCategory()
-
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": err.Error()})
 		return
 	}
 
 	c.JSON(http.StatusOK, gin.H{"error": false, "code": http.StatusOK, "message": "create category success"})
-
 }

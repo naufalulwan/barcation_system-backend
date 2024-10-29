@@ -5,7 +5,9 @@ import (
 	"barcation_be/controllers"
 	"barcation_be/controllers/cart"
 	"barcation_be/controllers/category"
+	"barcation_be/controllers/information"
 	"barcation_be/controllers/inquiry"
+	"barcation_be/controllers/payment"
 	"barcation_be/controllers/product"
 	"barcation_be/controllers/public"
 	"barcation_be/controllers/user"
@@ -32,7 +34,7 @@ func main() {
 	config.LoadConfig()
 	config.SetupDatabase()
 
-	err := config.DB.AutoMigrate(&models.User{}, &models.Category{}, &models.Product{}, &models.Cart{}, &models.Inquiry{})
+	err := config.DB.AutoMigrate(&models.User{}, &models.Category{}, &models.Product{}, &models.Cart{}, &models.Inquiry{}, &models.Payment{}, &models.Information{})
 	if err != nil {
 		return
 	}
@@ -80,6 +82,7 @@ func main() {
 }
 
 func setRoute() {
+	r.GET("temp/product_image/:filename", helper.ServeImageHelper)
 
 	// API FOR PUBLIC ["/api/public"]
 	publicParam := r.Group("/api/public")
@@ -104,6 +107,7 @@ func setRoute() {
 	protectedUser.PUT("/update_level_user", user.UpdateLevelUserController)
 	protectedUser.DELETE("/delete_user", user.DeleteUserController)
 	protectedUser.PUT("/recovery_user", user.RecoveryUserController)
+	protectedUser.PUT("/forgot_user", user.ForgotPasswordUserController)
 	protectedUser.GET("/logout", controllers.LogoutController)
 
 	// API FOR CATEGORY ["/api/category"]
@@ -142,5 +146,20 @@ func setRoute() {
 	protectedInquiry.POST("/create_inquiry", inquiry.CreateInquiryController)
 	protectedInquiry.DELETE("/delete_inquiry", inquiry.DeleteInquiryController)
 	protectedInquiry.PUT("/update_inquiry", inquiry.UpdateInquiryController)
+
+	// API FOR PAYMENT ["/api/payment"]
+	protectedPayment := r.Group("/api/payment")
+	protectedPayment.Use(middlewares.AuthTokenMiddleware())
+
+	protectedPayment.GET("/get_payment", payment.GetPaymentController)
+	protectedPayment.GET("/get_payment_by_id", payment.GetPaymentByIdController)
+	protectedPayment.POST("/create_payment", payment.CreatePaymentController)
+	protectedPayment.DELETE("/delete_payment", payment.DeletePaymentController)
+	protectedPayment.PUT("/update_payment", payment.UpdatePaymentController)
+
+	protectedInformation := r.Group("/api/information")
+	protectedInformation.Use(middlewares.AuthTokenMiddleware())
+	protectedInformation.POST("/create_information", information.CreateInformationController)
+	r.GET("/api/information/get_information", information.GetInformationController)
 
 }

@@ -45,5 +45,4 @@ func DeleteCartController(c *gin.Context) {
 	}
 
 	c.JSON(http.StatusOK, gin.H{"error": false, "code": http.StatusOK, "message": "delete cart success"})
-
 }

@@ -3,7 +3,7 @@ package models
 import (
 	"barcation_be/config"
 	"errors"
-
+	"fmt"
 	"gorm.io/gorm"
 )
 
@@ -73,6 +73,8 @@ func (p *Product) GetProduct() ([]Product, error) {
 }
 
 func (p *Product) SaveProduct() error {
+	fmt.Printf("Category ID : " + fmt.Sprint(p.CategoryID))
+	fmt.Println("Category Name : " + p.Category.Name)
 	if err := config.DB.First(&Category{}, p.CategoryID).Error; err != nil {
 		if errors.Is(err, gorm.ErrRecordNotFound) {
 			return errors.New("category not found")

@@ -1,0 +1,11 @@
+POST http://localhost:8080/api/information/create_information
+Authorization: {{token}}
+Refresh-Token: {{refresh-token}}
+Content-Type: application/json
+
+{
+  "type": "rail",
+  "title": "Berak dicelana",
+  "message": null,
+  "image": null
+}

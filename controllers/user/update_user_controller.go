@@ -16,24 +16,20 @@ type updateUserRequest struct {
 }
 
 func UpdateUserController(c *gin.Context) {
-
-	user_id, err := handlers.ExtractTokenById(c)
-
 	var u models.User
-
-	if err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": err.Error()})
-		return
-	}
-
-	data, err := u.GetUserById(user_id)
-
-	if err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": err.Error()})
-		return
-	}
-
 	var request updateUserRequest
+
+	userId, err := handlers.ExtractTokenById(c)
+	if err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": err.Error()})
+		return
+	}
+
+	data, err := u.GetUserById(userId)
+	if err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": err.Error()})
+		return
+	}
 
 	if err := c.ShouldBindJSON(&request); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": err.Error()})
@@ -46,7 +42,6 @@ func UpdateUserController(c *gin.Context) {
 	u.Position = request.Position
 
 	err = u.UpdateUser()
-
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": err.Error()})
 		return
@@ -71,5 +66,4 @@ func UpdateUserController(c *gin.Context) {
 	}
 
 	c.JSON(http.StatusOK, gin.H{"error": false, "code": http.StatusOK, "message": "update success", "id": data.ID, "user": res, "updated_at": u.UpdatedAt})
-
 }

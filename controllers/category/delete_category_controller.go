@@ -16,8 +16,8 @@ func DeleteCategoryController(c *gin.Context) {
 	var cat models.Category
 	var u models.User
 	var request deleteCategoryRequest
-	admin_id, err := handlers.ExtractTokenById(c)
 
+	adminId, err := handlers.ExtractTokenById(c)
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": err.Error()})
 		return
@@ -28,8 +28,7 @@ func DeleteCategoryController(c *gin.Context) {
 		return
 	}
 
-	dataAdmin, err := u.GetUserById(admin_id)
-
+	dataAdmin, err := u.GetUserById(adminId)
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": err.Error()})
 		return
@@ -41,12 +40,10 @@ func DeleteCategoryController(c *gin.Context) {
 	}
 
 	err = cat.DeleteCategory(request.ID)
-
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": err.Error()})
 		return
 	}
 
 	c.JSON(http.StatusOK, gin.H{"error": false, "code": http.StatusOK, "message": "delete category success"})
-
 }

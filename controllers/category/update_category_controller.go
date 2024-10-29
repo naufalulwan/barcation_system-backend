@@ -15,19 +15,17 @@ type updateCategoryRequest struct {
 }
 
 func UpdateCategoryController(c *gin.Context) {
-
 	var request updateCategoryRequest
 	var cat models.Category
 	var u models.User
-	admin_id, err := handlers.ExtractTokenById(c)
 
+	adminId, err := handlers.ExtractTokenById(c)
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": err.Error()})
 		return
 	}
 
-	dataAdmin, err := u.GetUserById(admin_id)
-
+	dataAdmin, err := u.GetUserById(adminId)
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": err.Error()})
 		return
@@ -52,5 +50,4 @@ func UpdateCategoryController(c *gin.Context) {
 	}
 
 	c.JSON(http.StatusOK, gin.H{"error": false, "code": http.StatusOK, "message": "update category success"})
-
 }

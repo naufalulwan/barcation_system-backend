@@ -15,16 +15,14 @@ type InfoLoginRequest struct {
 
 func GetInfoLoginController(c *gin.Context) {
 	var request InfoLoginRequest
+	var u models.User
 
 	if err := c.ShouldBindJSON(&request); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": err.Error()})
 		return
 	}
 
-	var u models.User
-
 	data, err := u.GetUserByDeviceId(request.DeviceId, request.Username)
-
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": err.Error()})
 		return
@@ -34,7 +32,6 @@ func GetInfoLoginController(c *gin.Context) {
 		data.SaveLogin = false
 
 		err = data.UpdateSaveInfoLogin()
-
 		if err != nil {
 			c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": err.Error()})
 			return

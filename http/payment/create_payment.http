@@ -1,0 +1,15 @@
+POST http://localhost:8080/api/payment/create_payment
+Authorization: {{token}}
+Refresh-Token: {{refresh-token}}
+Content-Type: application/json
+
+{
+  "user_id": 2,
+  "inquiry_id": 1,
+  "payment_type": "TUNAI",
+  "payment_reference": "1021020102",
+  "payment_signature": "1212121211",
+  "payment_date": "01/01/2024",
+  "total_price": 50000,
+  "total_quantity": 2
+}

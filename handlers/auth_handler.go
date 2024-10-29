@@ -4,9 +4,9 @@ import (
 	"barcation_be/config"
 	"barcation_be/models"
 	"errors"
-	"time"
-
+	"fmt"
 	"golang.org/x/crypto/bcrypt"
+	"time"
 )
 
 func AuthHandler(username, password, deviceId, ssn string, isInfoSave bool) (string, string, models.User, error) {
@@ -18,13 +18,22 @@ func AuthHandler(username, password, deviceId, ssn string, isInfoSave bool) (str
 		return "", "", res, err
 	}
 
-	err = config.DB.Model(models.User{}).Where("id = ?", res.ID).Update("device_id", deviceId).Update("save_login", isInfoSave).Update("last_login", time.Now()).Update("ssn", ssn).Error
-	if err != nil {
+	err = bcrypt.CompareHashAndPassword([]byte(res.Password), []byte(password))
+	if err != nil && errors.Is(err, bcrypt.ErrMismatchedHashAndPassword) {
 		return "", "", res, err
 	}
 
-	err = bcrypt.CompareHashAndPassword([]byte(res.Password), []byte(password))
-	if err != nil && errors.Is(err, bcrypt.ErrMismatchedHashAndPassword) {
+	if res.Ssn == "" {
+		err = config.DB.Model(models.User{}).Where("id = ?", res.ID).Update("ssn", ssn).Error
+		if err != nil {
+			return "", "", res, err
+		}
+	} else if res.Ssn != ssn {
+		return "", "", res, fmt.Errorf("your ssn is already registered in another account")
+	}
+
+	err = config.DB.Model(models.User{}).Where("id = ?", res.ID).Update("device_id", deviceId).Update("save_login", isInfoSave).Update("last_login", time.Now()).Error
+	if err != nil {
 		return "", "", res, err
 	}
 

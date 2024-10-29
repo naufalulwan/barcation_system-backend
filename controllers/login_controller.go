@@ -34,9 +34,8 @@ func LoginController(c *gin.Context) {
 	}
 
 	accessToken, refreshToken, user, err := handlers.AuthHandler(u.Username, u.Password, u.DeviceId, u.Ssn, u.SaveLogin)
-
 	if err != nil {
-		c.JSON(http.StatusUnauthorized, gin.H{"error": true, "code": http.StatusUnauthorized, "message": "username or password is incorrect"})
+		c.JSON(http.StatusUnauthorized, gin.H{"error": true, "code": http.StatusUnauthorized, "message": err.Error()})
 		return
 	}
 

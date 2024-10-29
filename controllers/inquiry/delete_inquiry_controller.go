@@ -43,5 +43,5 @@ func DeleteInquiryController(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": err.Error()})
 	}
 
-	c.JSON(http.StatusOK, gin.H{"error": false, "code": http.StatusOK, "message": "delete cart success"})
+	c.JSON(http.StatusOK, gin.H{"error": false, "code": http.StatusOK, "message": "delete inquiry success"})
 }

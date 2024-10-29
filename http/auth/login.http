@@ -5,7 +5,7 @@ Content-Type: application/json
   "username": "admin",
   "password": "Admin123*",
   "device_id": "Android AP31312Z",
-  "ssn": "123123",
+  "ssn": "225",
   "is_save_info": true
 }
 

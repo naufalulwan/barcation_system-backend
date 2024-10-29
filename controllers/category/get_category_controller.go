@@ -11,7 +11,6 @@ func GetCategoryController(c *gin.Context) {
 	var cat models.Category
 
 	data, err := cat.GetCategory()
-
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": err.Error()})
 		return

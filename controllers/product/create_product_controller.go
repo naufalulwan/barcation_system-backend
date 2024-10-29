@@ -2,20 +2,19 @@ package product
 
 import (
 	"barcation_be/handlers"
+	"barcation_be/helper"
 	"barcation_be/models"
-
 	"net/http"
 
 	"github.com/gin-gonic/gin"
 )
 
 type createProductRequest struct {
-	Name        string `json:"name"`
-	Price       int    `json:"price"`
-	Quantity    int    `json:"quantity"`
-	Description string `json:"description"`
-	Image       string `json:"image"`
-	CategoryID  uint   `json:"category_id"`
+	Name        string `form:"name"`
+	Price       int    `form:"price"`
+	Quantity    int    `form:"quantity"`
+	Description string `form:"description"`
+	CategoryID  int    `form:"category_id"`
 }
 
 func CreateProductController(c *gin.Context) {
@@ -39,8 +38,21 @@ func CreateProductController(c *gin.Context) {
 		return
 	}
 
-	if err := c.ShouldBindJSON(&request); err != nil {
+	if err := c.ShouldBind(&request); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": err.Error()})
+		return
+	}
+
+	file, err := c.FormFile("image")
+	if err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "image is required"})
+		return
+	}
+
+	mimeType := file.Header.Get("Content-Type")
+	if mimeType != "image/jpeg" && mimeType != "image/png" {
+		helper.Logger.Debugf("Invalid image type: %s", mimeType)
+		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": "Invalid image format. Only JPEG, PNG, and GIF are allowed."})
 		return
 	}
 
@@ -49,14 +61,20 @@ func CreateProductController(c *gin.Context) {
 		Price:       request.Price,
 		Quantity:    request.Quantity,
 		Description: request.Description,
-		Image:       request.Image,
 		Status:      true,
-		CategoryID:  request.CategoryID,
+		CategoryID:  uint(request.CategoryID),
 	}
 
-	err = p.SaveProduct()
+	imagePath, err := helper.UploadImageHelper(file, "temp/product_image")
 	if err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": err.Error()})
+		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+		return
+	}
+
+	p.Image = imagePath
+
+	if err := p.SaveProduct(); err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return
 	}
 
@@ -71,5 +89,4 @@ func CreateProductController(c *gin.Context) {
 	}
 
 	c.JSON(http.StatusCreated, gin.H{"error": false, "code": http.StatusCreated, "message": "product created successfully", "id": p.ID, "product": res, "create_at": p.CreatedAt})
-
 }

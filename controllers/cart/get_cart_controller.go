@@ -11,7 +11,6 @@ func GetCartController(c *gin.Context) {
 	var cart models.Cart
 
 	data, err := cart.GetCart()
-
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": err.Error()})
 		return
@@ -37,5 +36,6 @@ func GetCartController(c *gin.Context) {
 			"total":    v.Total,
 		})
 	}
+
 	c.JSON(http.StatusOK, gin.H{"error": false, "code": http.StatusOK, "message": "success", "data": res})
 }

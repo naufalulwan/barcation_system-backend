@@ -15,18 +15,16 @@ type updateLevelUserRequest struct {
 }
 
 func UpdateLevelUserController(c *gin.Context) {
-	token_id, err := handlers.ExtractTokenById(c)
-
 	var userAdmin *models.User
 	var userUser *models.User
 
+	tokenId, err := handlers.ExtractTokenById(c)
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": err.Error()})
 		return
 	}
 
-	dataAdmin, err := userAdmin.GetUserById(token_id)
-
+	dataAdmin, err := userAdmin.GetUserById(tokenId)
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": err.Error()})
 		return
@@ -56,7 +54,6 @@ func UpdateLevelUserController(c *gin.Context) {
 	dataUser.Level = request.Level
 
 	err = dataUser.UpdateUser()
-
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": err.Error()})
 		return

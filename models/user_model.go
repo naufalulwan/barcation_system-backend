@@ -152,3 +152,12 @@ func (u *User) SaveUser() error {
 
 	return nil
 }
+
+func (u *User) GetUserByEmail(email string) (*User, error) {
+	err := config.DB.Model(User{}).Where("email = ?", email).Take(&u).Error
+	if err != nil {
+		return u, err
+	}
+
+	return u, nil
+}

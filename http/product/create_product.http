@@ -1,13 +1,31 @@
 POST http://localhost:8080/api/product/create_product
 Authorization: {{token}}
 Refresh-Token: {{refresh-token}}
-Content-Type: application/json
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
 
-{
-    "name": "Caramel Latte",
-    "price": 25000,
-    "quantity": 10,
-    "description": "Lorem Ipsum",
-    "image": "image:null",
-    "category_id": 4
-}
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="name"
+
+Es Coklat
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="description"
+
+Ini adalah Es Coklat
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="price"
+
+8000
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="category_id"
+
+4
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="quantity"
+
+20
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="es_coklat.jpg"
+Content-Type: image/jpeg
+
+< C:\Users\822157\Pictures\es_coklat.jpg
+------WebKitFormBoundary7MA4YWxkTrZu0gW--

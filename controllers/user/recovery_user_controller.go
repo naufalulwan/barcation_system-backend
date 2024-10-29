@@ -17,6 +17,7 @@ func RecoveryUserController(c *gin.Context) {
 	var req RecoveryUserRequest
 	var u *models.User
 	var userId *models.User
+
 	adminId, err := handlers.ExtractTokenById(c)
 
 	if err := c.ShouldBindJSON(&req); err != nil {
@@ -34,6 +35,7 @@ func RecoveryUserController(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": err.Error()})
 		return
 	}
+
 	if dataAdmin.Level != "admin" {
 		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": "only admin can recovery user"})
 		return
