@@ -5,7 +5,7 @@ import (
 )
 
 func EnviromentHelper() {
-	err := godotenv.Load(".env.dev")
+	err := godotenv.Load(".env")
 	if err != nil {
 		return
 	}
