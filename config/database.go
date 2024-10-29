@@ -14,7 +14,7 @@ var DB *gorm.DB
 func SetupDatabase() {
 	var err error
 
-	dsn := fmt.Sprintf("host=%s port=%s dbname=%s user=%s password=%s sslmode=prefer TimeZone=Asia/Jakarta", ENV.DbHost, ENV.DbPort, ENV.DbName, ENV.DbUser, ENV.DbPass)
+	dsn := fmt.Sprintf("host=%s port=%s dbname=%s user=%s password=%s sslmode=require TimeZone=Asia/Jakarta", ENV.DbHost, ENV.DbPort, ENV.DbName, ENV.DbUser, ENV.DbPass)
 
 	//dsn := fmt.Sprintf("host=%s dbname=%s user=%s password=%s sslmode=require TimeZone=Asia/Jakarta", ENV.DbHost, ENV.DbName, ENV.DbUser, ENV.DbPass)
 
