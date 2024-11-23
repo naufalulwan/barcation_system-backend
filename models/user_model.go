@@ -12,18 +12,19 @@ import (
 
 type User struct {
 	gorm.Model
-	Username  string    `gorm:"type:varchar(100);not null;unique" json:"username"`
-	Password  string    `gorm:"type:varchar(100);not null" json:"password"`
-	Email     string    `gorm:"type:varchar(100);not null" json:"email"`
-	Level     string    `gorm:"type:varchar(100);not null" json:"level"`
-	Address   string    `gorm:"type:varchar(100)" json:"address"`
-	Phone     string    `gorm:"type:varchar(100)" json:"phone"`
-	Status    bool      `gorm:"not null" json:"status"`
-	Position  string    `gorm:"type:varchar(100)" json:"position"`
-	DeviceId  string    `gorm:"type:varchar(100)" json:"device_id"`
-	SaveLogin bool      `gorm:"not null" json:"save_login"`
-	LastLogin time.Time `json:"last_login"`
-	Ssn       string    `gorm:"type:varchar(100)" json:"ssn"`
+	Username    string    `gorm:"type:varchar(100);not null;unique" json:"username"`
+	Password    string    `gorm:"type:varchar(100);not null" json:"password"`
+	Email       string    `gorm:"type:varchar(100);not null" json:"email"`
+	Level       string    `gorm:"type:varchar(100);not null" json:"level"`
+	Address     string    `gorm:"type:varchar(100)" json:"address"`
+	Phone       string    `gorm:"type:varchar(100)" json:"phone"`
+	Status      bool      `gorm:"not null" json:"status"`
+	Position    string    `gorm:"type:varchar(100)" json:"position"`
+	DeviceId    string    `gorm:"type:varchar(100)" json:"device_id"`
+	DeviceToken string    `gorm:"type:varchar(100)" json:"device_token"`
+	SaveLogin   bool      `gorm:"not null" json:"save_login"`
+	LastLogin   time.Time `json:"last_login"`
+	Ssn         string    `gorm:"type:varchar(100)" json:"ssn"`
 }
 
 func (u *User) UpdateSaveInfoLogin() error {

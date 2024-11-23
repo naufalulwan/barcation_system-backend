@@ -9,7 +9,7 @@ import (
 	"time"
 )
 
-func AuthHandler(username, password, deviceId, ssn string, isInfoSave bool) (string, string, models.User, error) {
+func AuthHandler(username, password, deviceId, deviceToken, ssn string, isInfoSave bool) (string, string, models.User, error) {
 	var err error
 	res := models.User{}
 
@@ -32,7 +32,7 @@ func AuthHandler(username, password, deviceId, ssn string, isInfoSave bool) (str
 		return "", "", res, fmt.Errorf("your ssn is already registered in another account")
 	}
 
-	err = config.DB.Model(models.User{}).Where("id = ?", res.ID).Update("device_id", deviceId).Update("save_login", isInfoSave).Update("last_login", time.Now()).Error
+	err = config.DB.Model(models.User{}).Where("id = ?", res.ID).Update("device_id", deviceId).Update("save_login", isInfoSave).Update("device_token", deviceToken).Update("last_login", time.Now()).Error
 	if err != nil {
 		return "", "", res, err
 	}

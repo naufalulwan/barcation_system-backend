@@ -10,11 +10,12 @@ import (
 )
 
 type loginRequest struct {
-	Username   string `json:"username" binding:"required"`
-	Password   string `json:"password" binding:"required"`
-	DeviceId   string `json:"device_id" binding:"required"`
-	IsSaveInfo bool   `json:"is_save_info"`
-	Ssn        string `json:"ssn" binding:"required"`
+	Username    string `json:"username" binding:"required"`
+	Password    string `json:"password" binding:"required"`
+	DeviceId    string `json:"device_id" binding:"required"`
+	DeviceToken string `json:"device_token" binding:"required"`
+	IsSaveInfo  bool   `json:"is_save_info"`
+	Ssn         string `json:"ssn" binding:"required"`
 }
 
 func LoginController(c *gin.Context) {
@@ -26,14 +27,15 @@ func LoginController(c *gin.Context) {
 	}
 
 	u := models.User{
-		Username:  req.Username,
-		Password:  req.Password,
-		DeviceId:  req.DeviceId,
-		SaveLogin: req.IsSaveInfo,
-		Ssn:       req.Ssn,
+		Username:    req.Username,
+		Password:    req.Password,
+		DeviceId:    req.DeviceId,
+		SaveLogin:   req.IsSaveInfo,
+		DeviceToken: req.DeviceToken,
+		Ssn:         req.Ssn,
 	}
 
-	accessToken, refreshToken, user, err := handlers.AuthHandler(u.Username, u.Password, u.DeviceId, u.Ssn, u.SaveLogin)
+	accessToken, refreshToken, user, err := handlers.AuthHandler(u.Username, u.Password, u.DeviceId, u.DeviceToken, u.Ssn, u.SaveLogin)
 	if err != nil {
 		c.JSON(http.StatusUnauthorized, gin.H{"error": true, "code": http.StatusUnauthorized, "message": err.Error()})
 		return
