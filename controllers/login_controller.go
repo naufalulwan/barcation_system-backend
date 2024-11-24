@@ -22,7 +22,7 @@ func LoginController(c *gin.Context) {
 	var req loginRequest
 
 	if err := c.ShouldBindJSON(&req); err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusOK, "message": "Terjadi kesalahan saat menerima data login, silahkan cek kembali"})
+		c.JSON(http.StatusOK, gin.H{"error": true, "code": http.StatusOK, "message": "Terjadi kesalahan saat menerima data login, silahkan cek kembali"})
 		return
 	}
 
@@ -37,7 +37,7 @@ func LoginController(c *gin.Context) {
 
 	accessToken, refreshToken, user, err := handlers.AuthHandler(u.Username, u.Password, u.DeviceId, u.DeviceToken, u.Ssn, u.SaveLogin)
 	if err != nil {
-		c.JSON(http.StatusUnauthorized, gin.H{"error": true, "code": http.StatusOK, "message": err.Error()})
+		c.JSON(http.StatusOK, gin.H{"error": true, "code": http.StatusOK, "message": err.Error()})
 		return
 	}
 
