@@ -24,7 +24,6 @@ type User struct {
 	DeviceToken string    `gorm:"type:varchar(100)" json:"device_token"`
 	SaveLogin   bool      `gorm:"not null" json:"save_login"`
 	LastLogin   time.Time `json:"last_login"`
-	Ssn         string    `gorm:"type:varchar(100)" json:"ssn"`
 }
 
 func (u *User) UpdateSaveInfoLogin() error {

@@ -10,7 +10,6 @@ import (
 type InfoLoginRequest struct {
 	Username string `json:"username" binding:"required"`
 	DeviceId string `json:"device_id" binding:"required"`
-	Ssn      string `json:"ssn" binding:"required"`
 }
 
 func GetInfoLoginController(c *gin.Context) {
@@ -28,7 +27,7 @@ func GetInfoLoginController(c *gin.Context) {
 		return
 	}
 
-	if data.Ssn != request.Ssn {
+	if data.DeviceId != request.DeviceId {
 		data.SaveLogin = false
 
 		err = data.UpdateSaveInfoLogin()
@@ -37,14 +36,13 @@ func GetInfoLoginController(c *gin.Context) {
 			return
 		}
 
-		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": "ssn not match"})
+		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": "id device not match"})
 		return
 	}
 
 	res := map[string]interface{}{
 		"username":     data.Username,
 		"device_id":    data.DeviceId,
-		"ssn":          data.Ssn,
 		"is_save_info": data.SaveLogin,
 	}
 

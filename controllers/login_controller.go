@@ -15,14 +15,13 @@ type loginRequest struct {
 	DeviceId    string `json:"device_id" binding:"required"`
 	DeviceToken string `json:"device_token" binding:"required"`
 	IsSaveInfo  bool   `json:"is_save_info"`
-	Ssn         string `json:"ssn" binding:"required"`
 }
 
 func LoginController(c *gin.Context) {
 	var req loginRequest
 
 	if err := c.ShouldBindJSON(&req); err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": "Terjadi kesalahan saat menerima data login, silahkan cek kembali"})
+		c.JSON(http.StatusBadRequest, gin.H{"error": true, "code": http.StatusBadRequest, "message": "Terjadi kesalahan saat menerima data login, silahkan cek kembali."})
 		return
 	}
 
@@ -32,10 +31,9 @@ func LoginController(c *gin.Context) {
 		DeviceId:    req.DeviceId,
 		SaveLogin:   req.IsSaveInfo,
 		DeviceToken: req.DeviceToken,
-		Ssn:         req.Ssn,
 	}
 
-	accessToken, refreshToken, user, err := handlers.AuthHandler(u.Username, u.Password, u.DeviceId, u.DeviceToken, u.Ssn, u.SaveLogin)
+	accessToken, refreshToken, user, err := handlers.AuthHandler(u.Username, u.Password, u.DeviceId, u.DeviceToken, u.SaveLogin)
 	if err != nil {
 		c.JSON(http.StatusUnauthorized, gin.H{"error": true, "code": http.StatusUnauthorized, "message": err.Error()})
 		return

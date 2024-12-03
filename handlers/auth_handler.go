@@ -9,7 +9,7 @@ import (
 	"time"
 )
 
-func AuthHandler(username, password, deviceId, deviceToken, ssn string, isInfoSave bool) (string, string, models.User, error) {
+func AuthHandler(username string, password string, deviceId string, deviceToken string, isInfoSave bool) (string, string, models.User, error) {
 	var err error
 	res := models.User{}
 
@@ -23,16 +23,16 @@ func AuthHandler(username, password, deviceId, deviceToken, ssn string, isInfoSa
 		return "", "", res, fmt.Errorf("username atau password salah, silahkan cek kembali")
 	}
 
-	if res.Ssn == "" {
-		err = config.DB.Model(models.User{}).Where("id = ?", res.ID).Update("ssn", ssn).Error
+	if res.DeviceId == "" {
+		err = config.DB.Model(models.User{}).Where("id = ?", res.ID).Update("device_id", deviceId).Error
 		if err != nil {
-			return "", "", res, fmt.Errorf("terjadi kesalahan saat menyimpan data SSN")
+			return "", "", res, fmt.Errorf("terjadi kesalahan saat menyimpan data id device")
 		}
-	} else if res.Ssn != ssn {
+	} else if res.DeviceId != deviceId {
 		return "", "", res, fmt.Errorf("akun anda sudah digunakan pada device lain, silahkan hubungi ke admin")
 	}
 
-	err = config.DB.Model(models.User{}).Where("id = ?", res.ID).Update("device_id", deviceId).Update("save_login", isInfoSave).Update("device_token", deviceToken).Update("last_login", time.Now()).Error
+	err = config.DB.Model(models.User{}).Where("id = ?", res.ID).Update("save_login", isInfoSave).Update("device_token", deviceToken).Update("last_login", time.Now()).Error
 	if err != nil {
 		return "", "", res, fmt.Errorf("terjadi kesalahan saat menyimpan data device ID, device token, dan last login")
 	}
